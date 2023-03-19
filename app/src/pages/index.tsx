@@ -1,15 +1,15 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import { HomeView } from "../views";
+import type { NextPage } from "next";
 
 const Home: NextPage = (props) => {
   return (
     <div>
       <Head>
-        <title>Solana Scaffold</title>
+        <title>WSoS Banks</title>
         <meta
           name="description"
-          content="Solana Scaffold"
+          content="Banks"
         />
       </Head>
       <HomeView />

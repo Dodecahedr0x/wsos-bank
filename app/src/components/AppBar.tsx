@@ -1,10 +1,11 @@
+import React, { useState } from "react";
+
 import { FC } from 'react';
 import Link from "next/link";
-import dynamic from 'next/dynamic';
-import React, { useState } from "react";
-import { useAutoConnect } from '../contexts/AutoConnectProvider';
-import NetworkSwitcher from './NetworkSwitcher';
 import NavElement from './nav-element';
+import NetworkSwitcher from './NetworkSwitcher';
+import dynamic from 'next/dynamic';
+import { useAutoConnect } from '../contexts/AutoConnectProvider';
 
 const WalletMultiButtonDynamic = dynamic(
   async () => (await import('@solana/wallet-adapter-react-ui')).WalletMultiButton,
@@ -59,11 +60,11 @@ export const AppBar: React.FC = () => {
             href="/"
             navigationStarts={() => setIsNavOpen(false)}
           />
-          <NavElement
+          {/* <NavElement
             label="Basics"
             href="/basics"
             navigationStarts={() => setIsNavOpen(false)}
-          />
+          /> */}
           <WalletMultiButtonDynamic className="btn-ghost btn-sm rounded-btn text-lg mr-6 " />
         </div>
           <label
